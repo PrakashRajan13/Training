@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding:0;
+}
+.main{
+    margin-left:20px;
+    margin-top: 20px;
+    width:1200px;
+
+}
+.child{
+    border:2px solid lightseagreen ;
+    width:7.5%;
+    height:700px;
+    background-color: bisque;
+    display: inline-block;
+}
+

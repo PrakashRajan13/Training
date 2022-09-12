@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    margin-top:50px;
+}
+.child{
+    display: inline-block;
+    border: 2px solid blue;
+    width:31%;
+    height:40%;
+    margin-left:20px;
+}
