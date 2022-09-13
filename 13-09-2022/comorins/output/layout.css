@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+}
+header{
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5%;
+    border-bottom:5px solid white;
+    font-size:30px;
+}
+nav{
+    background-color:gray;
+    color:white;
+    text-align:center;
+    padding:2%;
+    border-bottom:5px solid white;  
+    font-size: 30px;
+}
+section{
+    background-color:grey;
+    color:white;
+    text-align:center;
+    padding-top:75px;
+    padding-bottom:200px;
+    border-bottom:5px solid white;
+    font-size: 30px;
+}
+footer{
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:2%;
+    font-size: 30px;
+}
