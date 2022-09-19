@@ -1,0 +1,32 @@
+*{
+    margin:0;
+    padding:0;
+}
+div{
+  background-color: pink;
+  border:1px solid black;
+}
+@media(max-width:1200px) {
+  div{
+    width:24%;  
+    background-color: red;
+    display: inline-block;
+  }
+}
+@media(max-width:991px) {
+  div{
+    width:49%;  
+    background-color: violet;
+    display: inline-block;
+  }
+}
+@media(max-width:767px) {
+  div{  
+    display:block;
+    background-color: green;
+  }
+}
+@media(max-width:575px) {
+  div{
+    background-color: brown;
+  }

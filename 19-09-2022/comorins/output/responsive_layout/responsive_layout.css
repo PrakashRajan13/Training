@@ -1,0 +1,322 @@
+*{
+    margin:0;
+    padding:0;
+}
+@media(min-width:575px){
+    body{
+       background-color:#f1f1f1;
+    }
+    .margin{
+        margin: 10px;
+       
+    }
+    .heading{
+        text-align: center;
+    }
+    .heading h1{
+        font-size: 40px;
+        padding-top: 20px;
+    }
+    .heading p{
+        padding-top:20px;
+        padding-bottom: 30px;
+    }
+    .navigation ul{
+        background-color: #333333;
+        text-align: center;
+    }
+    .navigation li{
+        
+        display: inline-block;
+        padding: 10px;
+    }
+    .navigation li:last-child{
+        padding-right:20px;
+    }
+    .navigation a{
+        text-decoration: none;
+        color: white;
+    }
+    .box1{
+        background-color: white;
+        margin-top: 10px;
+        padding: 20px;
+    }
+    .img1{
+        background-color:#aaaaaa;
+        padding:20px 0px 80px 20px;
+    }
+    .side1 .box1 h2{
+        padding-bottom:10px;
+    }
+    .side1 .box1 p{
+        padding-bottom:10px;
+    }
+    .side1p{
+        padding-top: 10px;
+    }
+    .side2{
+        margin-top:10px;
+        width:100%;
+    }
+    .side2 .box2{
+        background-color: white;
+        padding:20px; 
+    }
+    .side2 .box2 .img2{
+        background-color:#aaaaaa ;
+        margin-top:10px;
+        padding: 20px 20px 50px 20px
+    }
+    .side2 .box2 p{
+        padding-top: 10px;
+    }
+    .side2 .box3{
+        background-color:white;
+        margin-top: 10px;
+        padding:20px;
+    }
+    .box3img{
+        margin-top: 10px;
+    }
+    .side2 .box3 span{
+        display:block;
+        background-color: #aaaaaa;
+        padding:20px 20px 20px 20px;
+    }
+    .box4{
+        background-color: white;
+        padding: 20px;
+        margin-top: 10px;
+    }
+    .box4 p{
+        padding-top:10px;
+    }
+    footer{
+    margin-top: 10px;
+       background-color: #aaaaaa;
+       padding: 20px;
+       text-align: center;
+    
+    }
+}
+
+@media(min-width:767px){
+    body{
+        background-color:#f1f1f1;
+     }
+     .margin{
+         margin: 10px;
+        
+     }
+     .heading{
+         text-align: center;
+     }
+     .heading h1{
+         font-size: 40px;
+         padding-top: 20px;
+     }
+     .heading p{
+         padding-top:20px;
+         padding-bottom: 30px;
+     }
+     .navigation ul{
+         background-color: #333333;
+         text-align: center;
+     }
+     .navigation li{
+         display: inline-block;
+         padding: 10px;
+     }
+     .navigation li:last-child{
+         padding-right:20px;
+     }
+     .navigation a{
+         text-decoration: none;
+         color: white;
+     }
+     section{
+         margin: 0 auto;
+         width: 100%;
+     }
+     .side1{
+         display: inline-block;
+         width:69%;
+     }
+     .box1{
+         display:inline-block;
+         background-color: white;
+         margin: 10px 10px 10px 0px;
+         padding: 20px;
+     }
+     .img1{
+         background-color:#aaaaaa;
+         padding:20px 0px 80px 20px;
+     }
+     .side1 .box1 h2{
+         padding-bottom:10px;
+     }
+     .side1 .box1 p{
+         padding-bottom:10px;
+     }
+     .side1p{
+         padding-top: 10px;
+     }
+     .side2{
+         display: inline-block;
+         width:29%;
+         vertical-align: top;
+         margin-top:10px;
+         padding-left: 10px;
+     }
+     .side2 .box2{
+         display: inline-block;
+         background-color: white;
+         padding:20px;
+     }
+     .side2 .box2 .img2{
+         background-color:#aaaaaa ;
+         margin-top:10px;
+         padding: 20px 20px 50px 20px
+     }
+     .side2 .box2 p{
+         padding-top: 10px;
+     }
+     .side2 .box3{
+         background-color:white;
+         margin-top: 10px;
+         padding:20px;
+     }
+     .box3img{
+         margin-top: 10px;
+     }
+     .side2 .box3 span{
+         display:block;
+         background-color: #aaaaaa;
+         padding:20px 20px 20px 20px;
+     }
+     .box4{
+         background-color: white;
+         padding: 20px;
+         margin-top: 10px;
+     }
+     .box4 p{
+         padding-top:10px;
+     }
+     footer{
+        background-color: #aaaaaa;
+        padding: 30px;
+        text-align: center;
+     }
+}
+     /*   min-width=1200px */
+@media(min-width:1200px){
+body{
+   background-color:#f1f1f1;
+}
+.margin{
+    margin: 10px;
+   
+}
+.heading{
+    text-align: center;
+}
+.heading h1{
+    font-size: 40px;
+    padding-top: 20px;
+}
+.heading p{
+    padding-top:20px;
+    padding-bottom: 30px;
+}
+.navigation ul{
+    background-color: #333333;
+    text-align: left;
+}
+.navigation li{
+    display: inline-block;
+    padding: 10px;
+}
+.navigation li:last-child{
+    float: right;
+    padding-right:20px;
+}
+.navigation a{
+    text-decoration: none;
+    color: white;
+}
+section{
+    margin: 0 auto;
+    width: 100%;
+}
+.side1{
+    display: inline-block;
+    width:69%;
+}
+.box1{
+    display:inline-block;
+    background-color: white;
+    margin: 10px 10px 10px 0px;
+    padding: 20px;
+}
+.img1{
+    background-color:#aaaaaa;
+    padding:20px 0px 80px 20px;
+}
+.side1 .box1 h2{
+    padding-bottom:10px;
+}
+.side1 .box1 p{
+    padding-bottom:10px;
+}
+.side1p{
+    padding-top: 10px;
+}
+.side2{
+    display: inline-block;
+    width:29.73%;
+    vertical-align: top;
+    margin-top:10px;
+    padding-left:10px;
+}
+.side2 .box2{
+    display: inline-block;
+    background-color: white;
+    padding:20px;
+}
+.side2 .box2 .img2{
+    background-color:#aaaaaa ;
+    margin-top:10px;
+    padding: 20px 20px 50px 20px
+}
+.side2 .box2 p{
+    padding-top: 10px;
+}
+.side2 .box3{
+    background-color:white;
+    margin-top: 10px;
+    padding:20px;
+}
+.box3img{
+    margin-top: 10px;
+}
+.side2 .box3 span{
+    display:block;
+    background-color: #aaaaaa;
+    padding:20px 20px 20px 20px;
+}
+.box4{
+    background-color: white;
+    padding: 20px;
+    margin-top: 10px;
+}
+.box4 p{
+    padding-top:10px;
+}
+footer{
+   background-color: #aaaaaa;
+   padding: 30px;
+   text-align: center;
+
+}
+}
