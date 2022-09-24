@@ -1,0 +1,87 @@
+.arrow {
+    border: solid #494D56;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding:2px;
+}
+.down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-left:1px;
+}
+.hover .hover1 .hover2 a:hover{
+    color: red;
+}
+.hover .hover1 .hover2 li{
+    padding-right:50px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;  
+    color: #494D56;
+}
+.hover .hover1 .hover2 button{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+.banpara{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 55px;
+    padding-top: 125px;
+
+}
+.banpara2{
+    padding-top: 27px;
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 154.4%;
+    color: #666666;
+}
+.banner{
+    margin-top: 65px;
+    margin-bottom: 81px;
+
+}
+.bannersec{
+    background-image: url(images/background.png);
+    background-repeat: no-repeat;
+}
+.vector{
+    margin: 52.33px 0px;
+}
+.vectorcon{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 34px;
+    color: #FFFFFF;
+    padding-top: 64px;
+}
+.emailsearch{
+    margin-top:70px;
+    background: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 10px;
+    width: 374px;
+    height: 58px;
+}
+.emailsearch::placeholder{
+    font-family: 'Helvetica';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    color: #494D56;
+    padding: 17px 24px;
+}

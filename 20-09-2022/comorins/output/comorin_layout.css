@@ -195,6 +195,10 @@
     .b2{
         margin-right:0px;
     } 
+    .b1:hover{
+        box-shadow: 0px 0px 20px 5px #f7afaf;
+        background-color:#f7afaf;
+    }
     .p1{
         font-family: 'Helvetica';
         font-style: normal;
@@ -1392,7 +1396,7 @@ a{
     margin-top: 0px;
     border:none;
     border-radius: 10px;
-    height: 49px; 
+    height: 58px;
     width: 167px;
     font-family: 'Helvetica';
     font-style: normal;
