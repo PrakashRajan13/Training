@@ -135,6 +135,9 @@
     padding-bottom: 87px;
 }
 /* section-4 */
+.section_4{
+    padding:289px 150px 144px;
+}
 .side_1_heading{
     font-family: 'Poppins';
     font-style: normal;
@@ -171,11 +174,83 @@
 }
 .emailbox{ 
     background-color: #ececf8;
-    padding: 24px 1px;
+    padding:13px 1px;
     width: 491px;
     border-radius: 12px     ;
 }
 .emailbox input{
     background-color:#ececf8;
     padding-right: 44px;
+    height:48px;
+}
+.img4{
+    background: #eae9fb;
+    border-radius: 12px;
+    padding:13px;
+}
+.sec4head{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #1E1F4B;
+    padding-top:12px;
+}
+.sec4para{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #2E3E5C;
+    opacity: 0.8;
+    width: 262px;
+}
+/* footer */
+footer{   
+    background: #2E3E5C;
+}
+.foot{
+    padding:58px 150px ;
+}
+.hr{
+    margin-top: 67px;
+    margin-bottom: 48px;
+    background: #EAEEF3;
+}
+.footpara{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+}
+.footernav .footerul .footnav{
+    padding-left: 0px; 
+}
+.footernav .footerul a{
+    color: #FFFFFF;
+}
+.footernav .footerul{
+    margin-top: 19px;
+}
+.footernav .footerul li{
+    padding-right: 60px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px; 
+}
+.footerpara{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 89px;
 }
