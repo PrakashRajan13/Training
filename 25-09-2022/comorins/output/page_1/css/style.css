@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+    /* navigation*/
+    header{
+        margin: 0;
+    }
+.logo{
+    margin-left: 99px;
+}
+.navigation-list li{
+
+    padding-left: 60px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #1E1F4B;
+}
+.button{
+    padding:10px 40px;
+    background: #706FE5;
+    border-radius: 12px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    
+}
+.navigation span{
+    padding: 0;
+}
+    /* banner-section */
+.banner{
+    margin: 0;
+}
+.bannerimg{
+    margin-top: 224px;
+    margin-bottom: 133px;
+}
+.bannerfstpara{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 110px;
+    letter-spacing: 0.2px;
+    color: #1E1F4B;
+    padding-left: 90px;
+    padding-top:231px;
+}
+.bannerscndpara{
+    padding-top:52px;
+    padding-left: 90px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 36px;
+    color: #2E3E5C;
+}
+.bannerspan{
+    border: 8px solid #706FE5;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 100px;
+    letter-spacing: 0.2px;
+    color: #706FE5;
+    padding:0.4px 37px;
+    position: relative;
+}
+.circle1{
+    position:absolute;
+    top:-18px; 
+    right:-18px
+}
+.circle2{
+    position:absolute;
+    top:-18px; 
+    left:-18px
+}
+.circle3{
+    position:absolute;
+    bottom:-18px; 
+    left:-18px
+}
+.circle4{
+    position:absolute;
+    bottom:-18px; 
+    right:-18px
+}
+    /* section-1 */
+.section_1 p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+    color: #1E1F4B;
+    padding-bottom:47px;
+}
+.section_1 .brand{
+    padding-bottom: 101px;
+}
+.section_1 .brand li{
+    padding-right:82.26px;
+}
+    /* section-2 */
+.section2{
+    margin:74px 177px 0px 209px;
+}
+.section2 .heading{   
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 40px;
+    letter-spacing: 0.5px;
+    padding-bottom:86px;
+}
+.section2 span{
+    color: #3972FE;
+}
+.watchimg{
+    padding: 23px 49px;
+    background: #F4F4FD;
+    border-radius: 32px;
+}
+.imgtitle{
+    font-family: 'Sans serif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.02em;
+    color: #1E1F4B;
+}
+.section2button{
+    padding:7px 19px;
+    background: rgba(57, 114, 254, 0.1);
+    border-radius: 8px;
+    font-family: 'Sans serif';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.02em;
+    color: #3972FE;
+ }
+      /* section-3 */
+.section3{
+    margin:167px 175px 0px;
+}
+.section3 p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 46px;
+}
+.bodyimg{
+    width: 100%;
+}
+    /* section-4 */
+.section4{
+    margin:247px 175px 224px;
+}
+.section4 p{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 46px;
+}
+        /* footer */
+footer{   
+    background: #2E3E5C;
+}
+.foot{
+    padding:58px 150px ;
+}
+.hr{
+    margin-top: 67px;
+    margin-bottom: 48px;
+    background: #EAEEF3;
+}
+.footpara{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+
+}
+.footernav .footerul .footnav{
+    padding-left: 0px; 
+}
+.footernav .footerul a{
+    color: #FFFFFF;
+}
+.footernav .footerul{
+    margin-top: 19px;
+}
+.footernav .footerul li{
+    padding-right: 60px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+   
+}
+.footerpara{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+    padding-top: 89px;
+}

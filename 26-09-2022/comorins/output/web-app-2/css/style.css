@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Poppins';
+    font-style: normal;
+}
+/* navigation */
+header{
+    background: #FFFFFF;
+}
+.head{
+    margin: 0px 152px 0px;
+   
+}
+.navigation a{
+font-family: 'Roboto';
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+letter-spacing: 0.01em;
+color: #1C1E21;
+}
+.navigation li{
+    padding-right: 29px;
+}
+/* bannner-section */
+.banner{
+    padding: 209px 127px 95px;
+}
+.banner_heading{
+    font-weight: 400;
+    font-size: 55px;
+    line-height: 74px;
+    color: #444444;
+    width: 373px;
+
+}
+.banner_content{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: #444444;
+}
+.address{
+    margin:122px 220px 0px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.08);
+    border-radius: 1000px;
+    padding:17px 20px;
+
+}
+.address_head{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    color: #232323;
+}
+.address_link{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    color: #65798A;
+}
+/* section-1 */
+.middle_section{
+    background: #F5F6F6;
+}
+.middle_head{
+    
+    padding: 119px 74px 122px;
+}
+.head1{
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0.24em;
+    color: #677B8C;
+}
+.head2{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #232323;
+}
+.middle{
+    
+    padding: 0px 125px 111px;
+}
+.social{
+    margin-top: 150px;
+}
+.social p{
+    margin-top:60px;
+}
+.sec_1_img{
+    position:relative;
+}
+.sec_1_content{
+    position:absolute;
+    top:46px;
+    left:82px;
+}
+.sec_1_con1{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 33px;
+    color: #FFFFFF;
+}
+.sec_1_con2{
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 47px;
+    color: #FFFFFF;
+    width: 376px;
+    margin-top:165px    ;
+}
+.sec_1_con3{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #FFFFFF;
+    margin-top:35px;
+}
+/* section-2 */
+.section_2{
+    background: #1C2B33;    
+}
+.section_2head{
+    padding: 144px 121px 92px 151px;
+}
+.section_2 .side1 p:first-child{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.1em;
+    color: #3578EA;
+    padding-top: 30px;
+}
+.section_2 .side1 p:nth-child(2){
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 48px;
+    color: #3578EA;
+    Width:532px;
+    padding-top:30px;
+}
+.section_2 .side1 p:nth-child(3){
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    color: #3578EA;
+    Width:431px;
+    padding-left:110px;
+    padding-top:30px;
+}
+.section_2 .side1 p:last-child{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+    padding-left: 110px;
+    padding-top:80px;
+
+}
+/* section_3 */
+.section_3{
+    padding: 151px 90px 158px;
+}
+.sec{
+    width: 100%;
+}
+.sec_3_head1{
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    padding-bottom: 77px;
+    letter-spacing: 0.1em;
+    color: #1C2B33;
+}
+.sec_3_head2{
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    color: #344854;
+}
+.sec_3_content{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    color: #344854;
+}
+.sec_3_date{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+    align-items: center;
+    color: #344854;
+}
+/* footer */
+footer{
+    padding:141px 163px 212px 127px;
+    background: #F5F6F6;
+}
+.foothead{
+    font-family: 'Facebook Sans';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #677B8C;
+    padding-top:72px;
+    padding-bottom:96px;
+}
+.para{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #232323;
+    padding-left:50px;
+}
+.footermenu{
+    margin-top: 141px;
+}
+.footermenu ul li{ 
+   list-style: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 28px;
+    color: #232323;
+}
+.bug{
+    text-align: right;
+}
+.footermenu ul span{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    color: #232323;
+}
