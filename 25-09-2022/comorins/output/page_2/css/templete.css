@@ -36,7 +36,11 @@
     /* bannner */
 .banner{
     margin: 79px 139px 130px;
-    border-radius: 10px;
+   
+}
+.bannerimg{
+    width: 100%;
+    border-radius: 12px;
 }
 /* section-2 */
 .date{
