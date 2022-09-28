@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task</title>
+</head>
+<body>
+    <script>
+          let resume={
+                    name:"Prakash R",
+                    education:[{
+                                class:10,
+                                institute:"C.S.I.Matriculation Hr Sec School",
+                                percentage:85
+                                },
+                                {
+                                class:12,
+                                institute:"DVD.Hr.Sec.School",
+                                percentage:63
+                                },
+                                {
+                                class:"B.E",
+                                institute:"Vins Christian College Of Enggineering",
+                                percentage:83 
+                                }],
+                    personal_details:{
+                                        DOB:13-03-2001,
+                                        father_name:"Renga Rajan G",
+                                        mather_name:"Latha L",
+                                        mobile_no:9384971102,
+                                        e_mail:"prakashrajan428@gmail.com",
+                                        address:"42/A Church Street Vetturnimadam Nagercoil",
+                                        martial_status:"single",
+                                        gender:"male",
+                                        language_known:["tamil","english"]
+                    },
+                    hobbies:["mobilegames","travelling"],
+                    skills:["java","html","css"],
+                    area_of_interest:"Nagercoil",
+                    experience:0,
+                    certification:["internship in central Workshop","Distinction in Junior typewriting"]
+                    };
+
+                // printing_institute_name
+
+        for(let i=0;i<resume.education.length;i++){
+            console.log(resume.education[i].institute);
+        }
+
+                    // printing_total_percentage
+        let result;
+        let total=0;
+        for(let i=0;i<resume.education.length;i++){
+            result=resume.education[i].percentage;
+            console.log(result)
+           total=total+result;
+        }
+        console.log(total);
+        console.log(total/resume.education.length+"%")
+
+                // printing total percentage by negulating sslc
+        result;
+        total=0;
+        let count=0;
+        for(let i=0;i<resume.education.length;i++){
+            
+            if(resume.education[i].class!=10){
+                result=resume.education[i].percentage;
+                console.log(result)
+                total=total+result;
+                count++;
+            }
+        }
+        console.log(total);
+        console.log(total/count+"%")
+
+           // funtion
+    </script>
+</body>
+</html>
