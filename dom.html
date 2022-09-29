@@ -15,6 +15,7 @@
         <button onclick="add()">Add</button><br><br><br>
         <input type="text" id="list">
         <button onclick="get()">+</button>
+        <ul id="displaying"></ul>
     </div>
     <script>
         function add(){
@@ -23,11 +24,19 @@
             let c=a+b;
             alert(c)
         }
-        let list=[]
+        let list=[];
         function get(){
             let todo=document.getElementById("list").value;
             list.push(todo);
-            alert(list)
+            document.getElementById("list").value=""
+            display(list);
+        }
+        function display(list_array){
+            let element="";
+            for(let i=0;i<list_array.length;i++){
+                element=element+"<li>"+list_array[i]+"</li>";
+            }
+            document.getElementById("displaying").innerHTML=element;
         }
     </script>
 </body>
