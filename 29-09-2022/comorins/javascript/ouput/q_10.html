@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q_10</title>
+</head>
+<body>
+    <input type="number" name="" id="fno">
+    <button onclick="evenorodd()">O/E</button>
+    <script>
+        function evenorodd(){
+            let a=Number(document.getElementById("fno").value);
+            if(a%2==0){
+                console.log("Number is Even");
+            }
+            else{
+                console.log("Number is Odd");
+            }
+            document.getElementById("fno").value=""
+        }
+    </script>
+</body>
+</html>

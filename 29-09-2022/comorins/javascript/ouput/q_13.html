@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q_13</title>
+</head>
+<body>
+    <input type="number" id="fno">
+    <input type="number" id="sno">
+    <input type="number" id="tno">
+    <button onclick="checking()">check</button>
+    <script>
+        function checking(){
+            let a=Number(document.getElementById("fno").value);
+            let b=Number(document.getElementById("sno").value);
+            let c=Number(document.getElementById("tno").value);
+            if(a>b && a>c){
+                console.log("The "+a+" is big");
+            }
+            else if(a<b && b>c){
+                console.log("The "+b+" is big");
+            }
+            else{
+                console.log("The "+c+" is big");
+            }
+            document.getElementById("fno").value=" ";
+            document.getElementById("sno").value=" ";
+            document.getElementById("tno").value=" ";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>q_12</title>
+</head>
+<body>
+    <input type="number" name="" id="fno">
+    <input type="number" name="" id="sno">
+    <button onclick="math()">>=<</button>
+    <script>
+            function math(){
+            let a=Number(document.getElementById("fno").value);
+            let b=Number(document.getElementById("sno").value);
+            if(a>b){
+                console.log("The largest number of "+ a +" and "+ b +" is "+a);
+            }
+            else if(a<b){
+                console.log("The largest number of "+ a +" and "+ b +" is "+b);
+            }
+            else{
+                console.log("Both the Numbers "+a+" and "+b+" are Same");
+            }
+            document.getElementById("fno").value=" ";
+            document.getElementById("sno").value=" ";
+        }
+    </script>
+</body>
+</html>
