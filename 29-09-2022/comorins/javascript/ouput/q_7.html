@@ -12,14 +12,16 @@
         function printEven(array){
          let arr = [];
          for (let i = 0; i < array.length; i++) {
-            let num = array[i];
-            if (num % 2 == 0) {
-            arr.push(num);
+            for(let j=0;j< array.length;j++){
+                if (array[i][j] % 2 == 0) {
+            arr.push(array[i][j]);
             }
             }
+            }
+          
             return arr ;
     }
-    let a=printEven([1,2,3,4,5,6,7,8,9,10])
+    let a=printEven([[1,2],[2,4]])
     console.log(a);
     </script>
 </body>

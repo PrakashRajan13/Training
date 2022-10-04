@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to_do</title>
+</head>
+<body class="bg-success">
+    <div class="container-fluid inner text-center bg-light">
+            <h2 class="mb-3">My to-do list</h2>
+            <input id="input" class="text" type="text"><button onclick="get()" id="add" class="ml-2 btn-primary">Add</button>
+            <ol class="ol" id="ol_list"></ol>
+            <button class="btn-primary mr-2">Clear Completed </button>
+            <button onclick="emptylist()" class="btn-danger  mr-2">Empty List</button>
+            <button onclick="sa" class="btn-success ml-2">Save List</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 

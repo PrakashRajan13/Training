@@ -8,14 +8,17 @@
 </head>
 <body>
     <script>
-        function printArray(){
-            for(let i=0;i<=10;i++){
-                for(let j=0;j<=10;j++){
-                    console.log([i,j])
+        function printArray(b){
+            let m=[];   
+            for(let i=0;i<b.length  ;i++){
+                for(let j=0;j<b.length;j++){
+                    m=[[i,j],[i,j]];
                 }
             }
+            console.log(m)
         }
-        printArray()
+        let a=[[1,2],[2,1]]
+        printArray(a)
     </script>
 </body>
 </html>

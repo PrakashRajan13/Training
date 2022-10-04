@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo_list</title>
+</head>
+<body>
+    <input id="input" class="text" type="text"><button onclick="get()" class="ml-2 btn-primary">Add</button>
+    <ol class="ol" id="ol_list"></ol>
+    <button onclick="empty()">Empty List</button>
+    <script>
+        if(!localStorage.getItem("todos")){
+            localStorage.setItem("todos",JSON.stringify([ ]));
+        }
+        let list=JSON.parse (localStorage.getItem("todos"));
+
+        function get(){
+            let do_list=document.getElementById("input").value;
+            list.push(do_list);
+            localStorage.setItem("todos",JSON.stringify(list));
+            document.getElementById("input").value=" ";
+            display()
+        }
+        function display(){
+            let element="";
+            let list2=JSON.parse(localStorage.getItem("todos"));
+            for(i=0;i<list2.length;i++){
+            element=element+"<li>"+list2[i]+"</li>";
+            }
+            document.getElementById("ol_list").innerHTML=element;
+        }
+        function empty(){
+            document.getElementById("ol_list").innerHTML=" ";
+            localStorage.clear();
+        }
+    </script>
+</body>
+</html>

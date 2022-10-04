@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>q_8</title>
+    <title>q_13</title>
 </head>
 <body>
     <script>
-        let array=[1,"apple",2,"orange"];
-        function deleteElement(a){
-            console.log(a);
-           let b=a.splice(0,3)
-            console.log(b)
+        function sum(n){
+           let add=0;
+           let rem;
+           while(n!=0){
+            rem=n%10;
+            add=add+rem;
+            n=n/10;
         }
-        deleteElement(array)
-
+        console.log(parseInt(add))
+    }
+    sum(123)
     </script>
 </body>
 </html>

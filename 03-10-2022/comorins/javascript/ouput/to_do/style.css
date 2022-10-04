@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.inner{
+    margin:0 auto;
+    width:500px;
+    margin-top: 200px;
+    border-radius: 20px;
+    padding-bottom:20px;
+    padding-top: 20px;
+}
+.text{
+    border-radius: 12px;
+}
+button{
+    border-radius: 12px;
+    padding:2px 4px;
+}
+.ol{
+    margin-left: 200px;
+    text-align: left;
+}
