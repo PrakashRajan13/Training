@@ -1,0 +1,15 @@
+body{
+    font-family: 'Roboto';
+  }
+  label{
+    font-size: 22px;
+  }
+  tr{
+    font-size: 17px;
+  }
+  li{
+    font-size: 22px;
+  }
+  a{
+    text-decoration: none;
+  }

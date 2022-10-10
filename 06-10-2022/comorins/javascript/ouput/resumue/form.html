@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+   <div class="container mt-5">
+    <h1 class="text-center pb-5">Fill Your Data</h1>
+    <div class="row">
+      <label class="col-1" for="">Name</label>
+      <input class="col-3" type="text" onkeyup="getvalue('name',this.value)">
+    </div>
+    <div class="row mt-3">
+      <label class="col-1" for="">E-mail</label>
+      <input class="col-3" type="email" onkeyup="getvalue('email',this.value)">
+    </div>
+    <div class="row mt-3">
+      <label class="col-1" for="">Mobile</label>
+      <input class="col-3" type="text" onkeyup="getvalue('mobile',this.value)">
+    </div>
+    <div class="row mt-3">
+      <label class=" col-1" for="">Role</label>
+      <input type="text" class="col-3" onkeyup="getvalue('role',this.value)">
+    </div>
+    <label class="row pl-3 mt-4" for=""><strong>Career_Objective</strong></label>
+    <textarea name="" class="mt-3 d-block" onkeyup="getvalue('career_objective',this.value)" id="" cols="80" rows="2"></textarea>
+    <label class="row pl-3 mt-4" for=""><strong>Skills</strong></label>
+    <div class="row pl-3" >
+      <input class="col-2 mr-2" type="text" onkeyup="getvalue('skill',this.value,0)">
+      <input class="col-2 mr-2" type="text" onkeyup="getvalue('skill',this.value,1)">
+      <input class="col-2 mr-2" type="text" onkeyup="getvalue('skill',this.value,2)">
+      <input class="col-2 mr-2" type="text" onkeyup="getvalue('skill',this.value,3)">
+    </div>
+    <label class="row pl-3 mt-4 mb-2" for=""><strong>Education</strong></label>
+    <div class="">
+      <table class="table  mt-2">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">course</th>
+            <th scope="col">Year</th>
+            <th scope="col">institute</th>
+            <th scope="col">percentage %</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><input type="text" onkeyup="getvalue('education',this.value,0,'course')"></td>
+            <td><input type="text" onkeyup="getvalue('education',this.value,0,'year')"></td>
+            <td><input type="text"onkeyup="getvalue('education',this.value,0,'instutite')"></td>
+            <td><input type="number" onkeyup="getvalue('education',this.value,0,'percentage')"></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td><input type="text" onkeyup="getvalue('education',this.value,1,'course')"></td>
+            <td><input type="text" onkeyup="getvalue('education',this.value,1,'year')"></td>
+            <td><input type="text"onkeyup="getvalue('education',this.value,1,'instutite')"></td>
+            <td><input type="number" onkeyup="getvalue('education',this.value,1,'percentage')"></td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td><input type="text" onkeyup="getvalue('education',this.value,2,'course')"></td>
+            <td><input type="text" onkeyup="getvalue('education',this.value,2,'year')"></td>
+            <td><input type="text"onkeyup="getvalue('education',this.value,2,'instutite')"></td>
+            <td><input type="number" onkeyup="getvalue('education',this.value,2,'percentage')"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <label class="row pl-3 mt-4" for=""><strong>Experience</strong></label>
+      <table class="table tab mt-">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Organisation</th>
+            <th scope="col">Role</th>
+            <th scope="col">Year</th>
+            <th scope="col">Contact</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><input type="text" onkeyup="getvalue('experience',this.value,0,'organisation')"></td>
+            <td><input type="text" onkeyup="getvalue('experience',this.value,0,'role')"></td>
+            <td><input type="text"onkeyup="getvalue('experience',this.value,0,'period')"></td>
+            <td><input type="text" onkeyup="getvalue('experience',this.value,0,'contact')"></td>
+          </tr>
+          <!-- <tr>
+            <th scope="row">2</th>
+            <td><input type="text" onkeyup="getvalue('experience',this.value,1,'organisation')"></td>
+            <td><input type="text" onkeyup="getvalue('experience',this.value,1,'role')"></td>
+            <td><input type="text"onkeyup="getvalue('experience',this.value,1,'period')"></td>
+            <td><input type="text" onkeyup="getvalue('experience',this.value,1,'contact')"></td>
+          </tr> -->
+        </tbody>
+      </table>
+        <label class="mt-4 pb-3 d-block border-bottom" for=""><strong>Personal_Details</strong></label>
+        <div class="row">
+          <label class="pl-3 mt-4 col-3" for="">Father Name</label>
+          <input class="pl-3 mt-4 col-3" type="text" onkeyup="getvalue('personaldetails',this.value,'fathername')">
+        </div>
+        <div class="row">
+          <label class="pl-3 mt-4 col-3" for="">Mother Name</label>
+          <input class="pl-3 mt-4 col-3" type="text" onkeyup="getvalue('personaldetails',this.value,'mothername')">
+        </div>
+        <div class="row">
+          <label class="pl-3 mt-4 col-3" for="">DOB</label> 
+          <input class="pl-3 mt-4 col-3" type="text" onkeyup="getvalue('personaldetails',this.value,'DOB')">
+        </div>  
+        <div class="row">
+          <label class="pl-3 mt-4 col-3" for="">Martial Status</label>
+          <input class="pl-3 mt-4 col-3" type="text" onkeyup="getvalue('personaldetails',this.value,'martialstatus')">
+        </div>  
+        <div class="row">
+          <label class="pl-3 mt-4 col-3" for="">Gender</label>
+          <input class="pl-3 mt-4 col-3" type="text" onkeyup="getvalue('personaldetails',this.value,'gender')">
+        </div>  
+        <div class="row">
+          <label class="pl-3 mt-4 col-3" for="">Address</label>
+          <textarea class="pl-3 mt-4 col-3" onkeyup="getvalue('personaldetails',this.value,'address')" name="" id="" cols="30" rows="1"></textarea>
+        </div>  
+        <div class="row">
+          <label class="pl-3 mt-4 col-3" for="">Languages</label>
+          <input class="pl-3 mt-4 col-3" type="text" onkeyup="getvalue('language',this.value,0)">
+          <input class="pl-3 ml-3 mt-4 col-3" type="text" onkeyup="getvalue('language',this.value,1)">
+        </div>  
+        <div class="row">
+          <label class="pl-3 mt-4 col-3" for="">Hobbies</label>
+          <input class="pl-3 mt-4 col-3" type="text" onkeyup="getvalue( 'hobbies',this.value,0)">
+          <input class="pl-3 ml-3 mt-4 col-3" type="text" onkeyup="getvalue( 'hobbies',this.value,1)">
+        </div>  
+        <label class="pt-5 d-block" for=""><strong>Certificate</strong></label>
+        <div class="row pl-3">
+          <input class="col-3" type="text" onkeyup="getvalue('certificate',this.value,0)">
+          <input class="ml-3 col-3"  type="text" onkeyup="getvalue('certificate',this.value,1)">
+        </div>
+        <label class="d-block pt-4 pb-2" for=""><strong>Project</strong></label>
+        <table class="table tab">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Title</th>
+            <th scope="col">Year</th>
+            <th scope="col">Abstract</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td><input type="text" onkeyup="getvalue('project',this.value,0,'title')"></td>
+            <td><input type="text" onkeyup="getvalue('project',this.value,0,'year')"></td>
+            <td><textarea onkeyup="getvalue('project',this.value,0,'abstract')" cols="30" rows="1"></textarea></td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td><input type="text" onkeyup="getvalue('project',this.value,1,'title')"></td>
+            <td><input type="text" onkeyup="getvalue('project',this.value,1,'year')"></td>
+            <td><textarea onkeyup="getvalue('project',this.value,1,'abstract')" cols="30" rows="1"></textarea></td>
+          </tr>
+        </tbody>
+      </table>
+      <label class="d-block pt-3" for=""><strong>Declaration</strong></label>
+      <textarea name="" onkeyup="getvalue('declaration',this.value)" id="" cols="80" rows="2"></textarea>
+      <div class="row justify-content-center mt-5">
+        <button class=" btn btn-secondary btn-lg" onclick="store()">submit</button>
+      </div>
+      <p id="view"></p>
+      <ol id="resume_list"></ol>
+   </div>
+      <script src="js/form_script.js"></script>
+</body>
+</html>   

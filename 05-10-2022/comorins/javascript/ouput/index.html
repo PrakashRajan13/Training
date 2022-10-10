@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class maths{
+  constructor(f){
+    this.b=f
+    this.a=123
+  }
+  add(){
+    return 2+3;
+  }
+  num(){
+    console.log(this.b)
+  }
+  number(){
+    console.log(this.a);
+  }
+  both(){
+    return this.number()+this.num();
+}
+}
+let maths_obj=new maths("prk");
+console.log(maths_obj.add())
+maths_obj.number();
+maths_obj.num();
+maths_obj.both();
+let date=new Date();
+console.log(date.getDate());
+console.log(date.getFullYear());
+console.log(date.getMonth());
+console.log(date.getMinutes());
+                                                                
+    </script>
+</body>
+</html>

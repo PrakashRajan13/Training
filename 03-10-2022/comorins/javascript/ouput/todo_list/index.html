@@ -9,13 +9,12 @@
 <body>
     <input id="input" class="text" type="text"><button onclick="get()" class="ml-2 btn-primary">Add</button>
     <ol class="ol" id="ol_list"></ol>
-    <button onclick="empty()">Empty List</button>
+    <!-- <button onclick="empty()">Empty List</button> -->
     <script>
         if(!localStorage.getItem("todos")){
             localStorage.setItem("todos",JSON.stringify([ ]));
         }
-        let list=JSON.parse (localStorage.getItem("todos"));
-
+        let list=JSON.parse(localStorage.getItem("todos"));
         function get(){
             let do_list=document.getElementById("input").value;
             list.push(do_list);
@@ -27,14 +26,18 @@
             let element="";
             let list2=JSON.parse(localStorage.getItem("todos"));
             for(i=0;i<list2.length;i++){
-            element=element+"<li>"+list2[i]+"</li>";
+            element=element+"<li>"+list2[i]+"<button onclick='empty("+i+")''>Empty</button>"+"</li>";
             }
             document.getElementById("ol_list").innerHTML=element;
         }
-        function empty(){
-            document.getElementById("ol_list").innerHTML=" ";
-            localStorage.clear();
+        function empty(i) {
+            let list3 = JSON.parse(localStorage.getItem("todos"));
+            list3.splice(i, 1)
+        localStorage.setItem("todos", JSON.stringify(list3))
+        display(list3)
+        console.log(list3)
         }
+
     </script>
 </body>
 </html>
