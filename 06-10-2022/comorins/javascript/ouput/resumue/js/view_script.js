@@ -2,7 +2,7 @@ let resume_details=JSON.parse(localStorage.getItem("resume"));
 let url_string=window.location.search;
   let urlParams = new URLSearchParams(url_string);
   let url = urlParams.get('name')
-  // alert(url);   
+  alert(url);   
   for(let i=0;i<resume_details.length;i++){
     if(url==resume_details[i].name){
       document.getElementById("name").innerHTML=resume_details[i].name;
