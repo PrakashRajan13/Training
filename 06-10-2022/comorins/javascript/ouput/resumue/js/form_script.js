@@ -45,6 +45,5 @@ for(let i=0;i<new_list.length;i++){
 ele=ele+"<li><a target='_blank' href='view.html?name="+new_list[i].name+"'>"+new_list[i].name+"</a></li>"
 }
 document.getElementById("resume_list").innerHTML=ele;
-
 }
 listing()

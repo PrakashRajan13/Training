@@ -50,5 +50,6 @@ let url_string=window.location.search;
       document.getElementById("declaration").innerHTML=resume_details[i].declaration;
       document.getElementById("sign").innerHTML=resume_details[i].name;
 
-    }
+    }a
+
   }
