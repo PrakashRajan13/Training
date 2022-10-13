@@ -1,9 +1,11 @@
 body{
     font-family: 'Roboto';
 }
+        /* header */
 header{
     background-color: red;
 }
+        /* top navigation */
 .navigation li{
     padding-right:20px;
 }
@@ -18,12 +20,18 @@ header{
     font-weight: bold;
 
 }
+        /* card content */
 .content{
     border: none;
 }
 .img{
     padding-top: 15px;
 }
+/* slider content */
+h5{
+    color: black;
+}
+        /* card content title */
 a{
     text-decoration: none;
     color: black;
@@ -31,4 +39,31 @@ a{
 a:hover{
     text-decoration: none;
     color: black;
+}
+.viewimg{
+    width: 100%;
+}
+    /* view page */
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+p{
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}   
+/* footer */
+.footer-navigation a:hover{
+    color: red !important;
+    background-color:white;
+    border-radius: 10px;
+}
+.social a img{
+    width: 50%;
+}
+.footer{
+    padding: 25px 0px;
 }
