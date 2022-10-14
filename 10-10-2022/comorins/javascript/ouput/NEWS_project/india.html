@@ -53,7 +53,7 @@
         <div class="row m-0" id="sec"></div>          
     </section>
                     <!-- footer -->
-    <footer class="container-fluid bg-danger footer">
+    <footer class="container-fluid footer">
         <div class="container">
                             <!-- footer logo -->
             <div class="row">
@@ -92,10 +92,10 @@
                 <div class="col-4">
                     <div class="row social pl-3">
                         <p class="col-12">Visit us</p>
-                        <a class='col-3' href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt=""></a>
-                        <a class='col-3' href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt=""></a>
-                        <a class='col-3' href="https://twitter.com/home" target="_blank"><img src="images/twitter.png" alt=""></a>
-                        <a class='col-3' href="https://www.youtube.com/" target="_blank"><img src="images/youtube.png" alt=""></a>
+                        <a class='col-3 zoom1' href="https://www.facebook.com/" target="_blank"><img class="footer-img" src="images/facebook.png" alt=""></a>
+                        <a class='col-3 zoom1' href="https://www.instagram.com/" target="_blank"><img class="footer-img" src="images/instagram.png" alt=""></a>
+                        <a class='col-3 zoom1' href="https://twitter.com/home" target="_blank"><img class="footer-img" src="images/twitter.png" alt=""></a>
+                        <a class='col-3 zoom1' href="https://www.youtube.com/" target="_blank"><img class="footer-img" src="images/youtube.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -108,11 +108,11 @@
             for(let i=0;i<data.length;i++){
             catagery=data[i].catagery.toLowerCase();
             if(catagery=="india"){
-                element+='<div class="card col-4 pl-0 content" style="width: 18rem;"><img class="img" id="url" src="'+data[i].img_url+'" class="card-img-top" alt="..."><div class="card-body"><a class="card-text font-weight-bold" id="content" href="view.html?id='+data[i].id+'">'+data[i].Title+'</a><p class="card-text pt-2"><small class="text-muted">'+data[i].date+'</small></p></div></div>';                document.getElementById("sec").innerHTML=element
-            }
-            }
-            
+                element+='<div class="card mt-4 col-4 zoom border-0"><div><a href="view.html?id='+data[i].id+'"><img class="img_now" id="url" src="'+data[i].img_url+'" class="card-img-top" alt="..."></a></div><div class="card-body"><a class="card-text font-weight-bold" id="content" href="view.html?id='+data[i].id+'">'+data[i].Title+'</a></div><div class="card-footer bg-white border-0"><small class="text-muted">'+data[i].date+'</small></div></div>'
+                document.getElementById("sec").innerHTML=element;
+                }
         }
+    }
         home()
     </script>
 </body>

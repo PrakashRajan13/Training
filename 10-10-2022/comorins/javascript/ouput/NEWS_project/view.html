@@ -47,11 +47,16 @@
                 <a class="nav-link" href="bookmark.html"><i class="fa fa-bookmark-o" ></i></a>
                 </span>
         </div>
-                    </nav>
+    </nav>
                                      <!-- section -->
     <section class="container">
-        <h2 class="my-3" id="title"></h2>
-        <img class="rounded viewimg" src="" id="img" alt="">
+        <div class="row p-0 m-0">
+            <h2 class="my-3 col-11" id="title"></h2>
+            <a class="col-1 bookmark-button" href="" onclick="add()"><i class="fa fa-bookmark-o" style="font-size:36px"></i></a>
+        </div>
+        <div class="text-center">
+            <img class="rounded" width="50%" src="" id="img" alt="">
+        </div>
         <div class="container col-11">
             <p class="font-weight-light" id="content"></p>
             <div class="row m-0 pb-3">
@@ -61,7 +66,7 @@
         </div>
     </section>
     <!-- footer -->
-    <footer class="container-fluid bg-danger footer">
+    <footer class="container-fluid footer">
         <div class="container">
                             <!-- footer logo -->
             <div class="row">
@@ -100,10 +105,10 @@
                 <div class="col-4">
                     <div class="row social pl-3">
                         <p class="col-12 ">Visit us</p>
-                        <a class='col-3' href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png" alt=""></a>
-                        <a class='col-3' href="https://www.instagram.com/" target="_blank"><img src="images/instagram.png" alt=""></a>
-                        <a class='col-3' href="https://twitter.com/home" target="_blank"><img src="images/twitter.png" alt=""></a>
-                        <a class='col-3' href="https://www.youtube.com/" target="_blank"><img src="images/youtube.png" alt=""></a>
+                        <a class='col-3 zoom1' href="https://www.facebook.com/" target="_blank"><img class="footer-img" src="images/facebook.png" alt=""></a>
+                        <a class='col-3 zoom1' href="https://www.instagram.com/" target="_blank"><img class="footer-img" src="images/instagram.png" alt=""></a>
+                        <a class='col-3 zoom1' href="https://twitter.com/home" target="_blank"><img class="footer-img" src="images/twitter.png" alt=""></a>
+                        <a class='col-3 zoom1' href="https://www.youtube.com/" target="_blank"><img class="footer-img" src="images/youtube.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -114,8 +119,14 @@
             let url_string=window.location.search;
             let urlParams = new URLSearchParams(url_string);
             let url = urlParams.get('id');
+            if(!localStorage.getItem("bookmark")){
+            localStorage.setItem("bookmark",JSON.stringify([ ]));
+            }
+            let bookmarks=JSON.parse(localStorage.getItem("bookmark"));
             // console.log(url)
-            for(let i=0;i<data.length;i++){
+                            // function to view the card 
+            function view(){
+                for(let i=0;i<data.length;i++){
                 if(url==data[i].id){
                     document.getElementById("title").innerHTML=data[i].Title;
                     document.getElementById("img").setAttribute("src",data[i].img_url);
@@ -124,6 +135,18 @@
                     document.getElementById("date").innerHTML=data[i].date;
                 }
             }
+            }
+                            // function for adding bookmark in local storage
+            function add(){
+                for(let i=0;i<data.length;i++){
+                    if(url==data[i].id){
+                        bookmarks.push(data[i]);
+                    }
+                }
+                localStorage.setItem("bookmark",JSON.stringify(bookmarks))
+            }
+            view()
     </script>
+    <script src="js/news_script.js"></script>
 </body>
 </html>

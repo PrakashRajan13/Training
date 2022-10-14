@@ -352,5 +352,5 @@ let data=[
     },
 ]   
             // storing data in local storage
-data.reverse();  //reverse the data and storing for display the last news at first
+data.reverse();
 localStorage.setItem("datas",JSON.stringify(data));
