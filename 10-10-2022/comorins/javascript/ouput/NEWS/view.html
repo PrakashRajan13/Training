@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+                    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODAY</title>   
+</head>
+<body>
+                    <!-- header -->
+    <header class="container-fluid" >
+        <div class="container p-0">
+            <div class="row ">  
+                <a class="col-1" href="index.html"><img  src="images/logo.png" alt=""></a>
+                <h1 class="col-11 text-center">TODAY</h1>
+            </div>
+        </div>
+    </header>
+                                     <!-- section -->
+    <section class="container" id="sec">
+            <div class="row p-0 m-0">
+                <h2 class="my-3 col-11" id="title"></h2>
+                <a class="col-1 bookmark-button" href="#" onclick="add()"><i class="fa fa-bookmark-o" style="font-size:36px"></i></a>
+            </div>
+            <div class="text-center">
+                <img class="rounded" width="50%" src="" id="img" alt="">
+            </div>
+            <div class="container col-11">
+                <p class="font-weight-light" id="content"></p>
+                <div class="row m-0 pb-3">
+                    <i class="col-12 text-right p-0 m-0" id="author"></i>
+                    <i class="col-12 text-right p-0" id="date"></i> 
+                </div>   
+        </div>
+    </section>
+                            <!-- footer -->
+    <footer class="container-fluid footer">
+        <div class="container">
+                            <!-- footer logo -->
+            <div class="row">
+                <div class="col-2 mt-4">
+                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                    <h3 class="font-weight-bold">TODAY</h3>
+                </div>
+                <div class="col-6">
+
+                </div>
+                            <!-- social media-->
+                <div class="col-4">
+                    <div class="row social pl-3">
+                        <p class="col-12 ">Follow Us</p>
+                        <a class='col-3' href="https://www.facebook.com/" target="_blank"><img class="footer-img" src="images/facebook.png" alt=""></a>
+                        <a class='col-3' href="https://www.instagram.com/" target="_blank"><img class="footer-img" src="images/instagram.png" alt=""></a>
+                        <a class='col-3' href="https://twitter.com/home" target="_blank"><img class="footer-img" src="images/twitter.png" alt=""></a>
+                        <a class='col-3' href="https://www.youtube.com/" target="_blank"><img class="footer-img" src="images/youtube.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>   
+            let data=JSON.parse(localStorage.getItem("datas"));
+            let url_string=window.location.search;  
+            let urlParams = new URLSearchParams(url_string);
+            let url = urlParams.get('id');
+            // console.log(url)
+
+                            // function to view the card 
+            function view(){
+                for(let i=0;i<data.length;i++){
+                if(url==data[i].id){
+                    document.getElementById("title").innerHTML=data[i].Title;
+                    document.getElementById("img").setAttribute("src",data[i].img_url);
+                    document.getElementById("content").innerHTML=data[i].content;
+                    document.getElementById("author").innerHTML=data[i].author;
+                    document.getElementById("date").innerHTML=data[i].date;
+                }
+            }
+            }
+                            // function for adding bookmark in local storage
+            function add(){
+            if(!localStorage.getItem("bookmark")){
+            localStorage.setItem("bookmark",JSON.stringify([ ]));
+            }
+            let bookmarks=JSON.parse(localStorage.getItem("bookmark"));
+                for(let i=0;i<data.length;i++){
+                    if(url==data[i].id){
+                        bookmarks.push(data[i]);
+                        localStorage.setItem("bookmark",JSON.stringify(bookmarks));
+                    }
+                }
+            }
+            view()
+    </script>   
+</body>
+</html>

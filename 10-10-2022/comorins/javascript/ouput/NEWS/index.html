@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+                <!-- header -->
+    <header class="container-fluid" >
+        <div class="container p-0">
+            <div class="row">  
+                <a class="col-1" href="index.html"><img  src="images/logo.png" alt=""></a>
+                <h1 class="col-11 text-center">TODAY</h1>
+            </div>
+        </div>
+    </header>
+                    <!-- navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+        <div class="collapse navbar-collapse container p-0 navigation" id="navbarNav">
+            <ul class="navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" onclick="index('home')" id="navbars" href="#">Home</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" onclick="index('politics')" id="navbars" href="#">Politics</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" onclick="index('sports')" id="navbars" href="#">Sports</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" onclick="index('technology')" id="navbars" href="#">Technology</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" onclick="index('cinema')" id="navbars" href="#">Cinema</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" onclick="index('india')" id="navbars" href="#">India</a>
+            </li>
+            </ul>
+            <span class="navbar-text ml-auto pr-1">
+                <a class="nav-link" onclick="show()" href="#"><i class="fa fa-bookmark-o" ></i></a>
+              </span>
+        </div>
+    </nav>
+                            <!-- date & time -->
+    <div class="container p-0 mb-3">
+        <div class="row bg-dark m-0">
+            <p class="col-1 p-0 m-0 time_date text-center font-weight-bold">TODAY</p>
+            <marquee direction="left" class="col-11"  loop="100" scrollamount="8">
+                <p class="p-0 m-0 text-white align-center" id="breaking"></p>
+            </marquee> 
+        </div>
+    </div>
+                        <!-- section -->
+    <section class="container p-0">
+        <div class="card-deck m-0 row" id="sec">
+        </div>  
+    </section>
+                        <!-- footer -->
+    <footer class="container-fluid footer">
+        <div class="container">
+                            <!-- footer logo -->
+            <div class="row">
+                <div class="col-2 mt-4">
+                    <a href="index.html"><img src="images/logo.png" alt=""></a>
+                    <h3 class="font-weight-bold">TODAY</h3>
+                </div>
+                                <!-- footer navigation -->
+                <div class="col-6 pt-2"> 
+                    <nav class="navbar navbar-expand">
+                        <div class=" navbar-collapse " id="navbarNav">
+                            <ul class="navbar-nav footer-navigation text-center row">
+                            <li class="nav-item active col-4">
+                                <a class="nav-link" onclick="index('home')" id="navbars" href="#">Home</a>
+                            </li>
+                            <li class="nav-item active col-4">
+                                <a class="nav-link" onclick="index('politics')" id="navbars" href="#">Politics</a>
+                            </li>
+                            <li class="nav-item active col-4">
+                                <a class="nav-link" onclick="index('sports')" id="navbars" href="#">Sports</a>
+                            </li>
+                            <li class="nav-item active col-4">
+                                <a class="nav-link" onclick="index('technology')" id="navbars" href="#">Technology</a>
+                            </li>
+                            <li class="nav-item active col-4">
+                                <a class="nav-link" onclick="index('cinema')" id="navbars" href="#">Cinema</a>
+                            </li>
+                            <li class="nav-item active col-4">
+                                <a class="nav-link" onclick="index('india')" id="navbars" href="#">India</a>
+                            </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+                            <!-- social media-->
+                <div class="col-4">
+                    <div class="row social pl-3">
+                        <p class="col-12">Follow Us</p>
+                        <a class='col-3 zoom1' href="https://www.facebook.com/" target="_blank"><img class="footer-img" src="images/facebook.png" alt=""></a>
+                        <a class='col-3 zoom1' href="https://www.instagram.com/" target="_blank"><img class="footer-img" src="images/instagram.png" alt=""></a>
+                        <a class='col-3 zoom1' href="https://twitter.com/home" target="_blank"><img class="footer-img" src="images/twitter.png" alt=""></a>
+                        <a class='col-3 zoom1' href="https://www.youtube.com/" target="_blank"><img class="footer-img" src="images/youtube.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div></div>
+    <script>
+        data=JSON.parse(localStorage.getItem("datas")) 
+
+        // function to load the data at open the file
+        function home(){
+             element = document.getElementById("sec");
+            for(let i=0;i<data.length;i++){
+            catagery=data[i].catagery.toLowerCase();
+            if(catagery=="home"){
+                element.innerHTML +='<a class="mb-3" style="width: 33.3%;" href="view.html?id='+data[i].id+'" target="_blank"><div class="card border-0" ><img style="min-height:250px;" class="card-img-top" src="'+data[i].img_url+'" alt="Card image cap"><div class="card-body p-0 mt-3"><h5 style="min-height: 100px;font-weight: bold;" class="card-title">'+data[i].Title+'</h5></div></div></a>';
+             }
+            }   
+        }
+        home()
+                    // function to change the navigation
+        function index(catagery){
+            let element = document.getElementById("sec");
+            element.innerHTML = "";
+            for(let i=0;i<data.length;i++){
+            if(catagery==data[i].catagery){
+                console.log(data[i])
+                element.innerHTML +='<a class="mb-3" style="width: 33.3%;" href="view.html?id='+data[i].id+'" target="_blank"><div class="card border-0"><img style="min-height:250px;" class="card-img-top" src="'+data[i].img_url+'" alt="Card image cap"><div class="card-body p-0 mt-3"><h5 style="min-height: 100px;font-weight: bold;" class="card-title">'+data[i].Title+'</h5></div></div></a>';
+            }
+            }
+        }
+        
+                        // function to  show the details in bookmark page
+        function show(){
+            let data=JSON.parse(localStorage.getItem("bookmark"));
+            let element = document.getElementById("sec");
+            element.innerHTML = "";
+            for(let i=0;i<data.length;i++){
+                element.innerHTML +='<div class="mb-3" style="width: 33.3%;"><a href="view.html?id='+data[i].id+'" target="_blank"><div class="card border-0" ><img style="min-height: 250px;"  class="card-img-top" src="'+data[i].img_url+'" alt="Card image cap"><div class="card-body p-0 mt-3"><h5 style="min-height: 100px;font-weight: bold;" class="card-title">'+data[i].Title+'</h5></a></div></div><div class="ml-3"><a href="#" class="remove_btn" onclick="remove('+i+')"><i class="fa fa-trash-o" style="font-size:48px;color:red"></i></a></div>';
+
+        }     
+        }
+                    // function to delete the card in book mark page
+        function remove(i){
+        let storage=JSON.parse(localStorage.getItem("bookmark"));
+        storage.splice(i,1);
+        localStorage.setItem("bookmark",JSON.stringify(storage));
+        show()
+        }
+                            // function for date & time
+        function time_date(){
+        var today=new Date();
+        var h=today.getHours();
+        var m=today.getMinutes();
+        var s=today.getSeconds();
+        var day=today.getDate();  
+        var month=today.getMonth()+1;  
+        var year=today.getFullYear();  
+        document.getElementById('breaking').innerHTML=h+":"+m+" "+" "+"||"+" "+" "+day+"/"+month+"/"+year;
+        }
+        time_date()
+
+    </script>
+    <script src="js/data.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+</body>
+</html>

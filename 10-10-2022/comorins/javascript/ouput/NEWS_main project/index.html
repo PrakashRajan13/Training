@@ -156,16 +156,17 @@
             </div>
         </div>
     </footer>
+    
+
     <script>
         data=JSON.parse(localStorage.getItem("datas"))
         let element=" ";
-        let ele=" "
                 // function for homescreen
         function home(){
             for(let i=0;i<data.length;i++){
             catagery=data[i].catagery.toLowerCase();
             if(catagery=="home"){
-                element+='<div class="card mt-4 col-4 zoom border-0"><div><a href="view.html?id='+data[i].id+'"><img class="img_now" id="url" src="'+data[i].img_url+'" class="card-img-top" alt="..."></a></div><div class="card-body"><a class="card-text font-weight-bold" id="content" href="view.html?id='+data[i].id+'">'+data[i].Title+'</a></div><div class="card-footer bg-white border-0"><small class="text-muted">'+data[i].date+'</small></div></div>'
+                element+='<div class="card mt-4 col-4 zoom border-0"><div><a href="view.html?id='+data[i].id+'"><img class="img_now" style="min-height: 200px;" id="url" src="'+data[i].img_url+'" class="card-img-top" alt="..."></a></div><div class="card-body"><a class="card-text font-weight-bold" id="content" href="view.html?id='+data[i].id+'">'+data[i].Title+'</a></div><div class="card-footer bg-white border-0"><small class="text-muted">'+data[i].date+'</small></div></div>'
                 document.getElementById("sec").innerHTML=element
             }
             }   

@@ -1,0 +1,109 @@
+body{
+    font-family: 'Roboto';
+}
+        /* header */
+header{
+    background-color: red;
+}
+        /* top navigation */
+.navigation li{
+    padding-right:20px;
+}
+.navigation a:hover{
+    color: white !important;
+    background-color: red;
+    border-radius: 10px;
+}
+.slider{
+    background-color: whitesmoke;
+    border-radius: 12px;
+    font-weight: bold;
+
+}
+        /* card content */
+.content{
+    border: none;
+}
+.img{
+    padding-top: 15px;
+}
+/* slider content */
+h5{
+    color: black;
+}
+        /* card content title */
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    text-decoration: none;
+    color: black;
+}
+
+    /* view page */
+h2{
+    text-align: center;
+    font-weight: bold;
+}
+p{
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: justify;
+    font-family: 'Times New Roman', Times, serif;
+}   
+/* footer */
+.footer-navigation a:hover{
+    color: red !important;
+    background-color:white;
+    border-radius: 10px;
+}
+.social a img{
+    width: 50%;
+}
+.footer{
+    padding: 25px 0px;
+    background-color: red;
+}
+.footer-img{
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 2px;
+    background-color: white;
+}
+/* bookmark button */
+.bookmark-button{
+    margin: 15px 0px 45px;
+    padding: 15px;
+    text-align: center;
+}
+.bookmark-button:hover{
+    background-color: red;
+    color: white;
+    border-radius: 12px;
+}
+/* time_date */
+.time_date{
+    background-color: red;
+}
+    /* card hover */
+.remove_btn{
+    background-color: white;
+    outline: none;
+}
+.img_now{
+    width: 100%;
+    height: 200px;
+}
+/* card hover */
+.zoom:hover{
+    transform: scale(1.05);
+    filter: brightness(.8);
+    transition: .5s;
+}
+.zoom1:hover{
+    transform: scale(1.2);
+    transition: .5s;
+  
+}
