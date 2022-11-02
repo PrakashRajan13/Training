@@ -47,7 +47,6 @@
                     <h3 class="font-weight-bold">TODAY</h3>
                 </div>
                 <div class="col-6">
-
                 </div>
                             <!-- social media-->
                 <div class="col-4">
@@ -64,11 +63,8 @@
     </footer>
     <script>   
             let data=JSON.parse(localStorage.getItem("datas"));
-            let url_string=window.location.search;  
-            let urlParams = new URLSearchParams(url_string);
+            let urlParams = new URLSearchParams(window.location.search);
             let url = urlParams.get('id');
-            // console.log(url)
-
                             // function to view the card 
             function view(){
                 for(let i=0;i<data.length;i++){

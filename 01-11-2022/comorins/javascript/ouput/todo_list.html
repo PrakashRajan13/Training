@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To_Do</title>
+</head>
+<body>
+    <div class="card-group " >
+        <div id="content" class="row p-0 m-0">
+        </div>
+      </div>
+    <script type="" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+                $.ajax({
+                    url:"https://dummyjson.com/todos",
+                    success:function(data){
+                        datas=data.todos;
+                        let element="";
+                        for(let i=0;i<datas.length;i++){
+                            element='<div class="card col-3 "><div class="card-body"><h5 class="card-title">'+datas[i].id+'</h5><p style="min-height: 50px;" class="card-text">'+datas[i].todo+'</p><p style="font-weight: bold;" class="card-text">'+datas[i].completed+'</p></div></div>'
+                            $("#content").append(element);
+                        }
+                        
+                        
+                        
+                    }   
+                })
+            })
+    </script>
+</body>
+</html>

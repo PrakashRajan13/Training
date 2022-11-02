@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="css/templete.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="font-weight-bold text-center">Resume</h1>
+        <h2 id="name" class="font-weight-bold"></h2>
+        <p class="font-weight-bold pt-2">E-mail ID :<span class="pl-2" id="email"> </span></p>
+        <p class="font-weight-bold">Mobile :<span class="pl-2" id="mobile"> </span></p>
+        <p class="font-weight-bold">Role :<span class="pl-2" id="rolename"> </span></p>
+        <h5 class="font-weight-bold">Career Objective</h5>
+        <p class="pb-3 container" id="career_objective"></p>
+                      <!-- education -->
+        <h5 class="font-weight-bold pt-4 pb-3">Academic Profile</h5>
+        <div class="container">
+          <table class="table table-bordered  border-dark mt-3">
+            <thead class="text-center">
+              <tr>
+                <th scope="col">Course</th>
+                <th scope="col">Institute</th>
+                <th scope="col">Year</th>
+                <th scope="col">Percentage</th>
+              </tr>
+            </thead>
+            <tbody class="text-center" >
+              <tr>
+                <td id="course0"></td>
+                <td id="instutite0"></td>
+                <td id="year0"></td>
+                <td id="percentage0"></td>
+              </tr>
+              <tr>
+                <td id="course1"></td>
+                <td id="instutite1"></td>
+                <td id="year1"></td>
+                <td id="percentage1"></td>
+              </tr>
+              <tr>
+                <td id="course2"></td>
+                <td id="instutite2"></td>
+                <td id="year2"></td>
+                <td id="percentage2"></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+                <!-- skills -->
+        <h5 class="font-weight-bold pt-4">Skills : <span id="skills"></span></h5>
+                    <!-- Experience -->
+        <h5 class="font-weight-bold pt-4 pb-4">Experience</h5>
+        <div class="container">
+          <p class="font-weight-bold">Organisation :<span id="organisation0"></span></p>
+          <p class="font-weight-bold">Role :<span id="role0"></span></p>
+          <p class="font-weight-bold">Year :<span id="period0"></span></p>
+          <p class="font-weight-bold">E-mail ID :<span id="contact0"></span></p>
+          <!-- <p class="font-weight-bold">Organisation :<span id="organisation1"></span></p>
+          <p class="font-weight-bold">Role :<span id="role1"></span></p>
+          <p class="font-weight-bold">Year :<span id="period1"></span></p>
+          <p class="font-weight-bold">E-mail ID :<span id="contact1"></span></p> -->
+        </div>
+                      <!-- projects -->
+        <h5 class="font-weight-bold pt-4 pb-4">Projects</h5>
+        <div class="container">
+          <p class="font-weight-bold">Title :<span id="title0"></span></p>
+          <p class="font-weight-bold">Year :<span id="time0"></span></p>
+          <p class="font-weight-bold">Abstract : <span id="abstract0"></span></p>
+          <p class="font-weight-bold">Title :<span id="title1"></span></p>
+          <p class="font-weight-bold">Year :<span id="time1"></span></p>
+          <p class="font-weight-bold">Abstract : <span id="abstract1"></span></p>
+        </div>
+                    <!-- personal_details -->
+        <h5 class="font-weight-bold pt-4 pb-4">Personal Details</h5>
+        <div class="container">
+          <div class="row">
+            <p class="font-weight-bold col-2">DOB</p>
+            <b class="col-1">:</b>
+            <span class="col-5" id="DOB"></span>
+          </div>
+          <div class="row">
+            <p class="font-weight-bold col-2">Address</p>
+            <b class="col-1" >:</b>
+            <span class="col-5" id="address"></span>
+          </div>
+          <div class="row">
+            <p class="font-weight-bold col-2">Gender</p>
+            <b class="col-1" >:</b>
+            <span class="col-5" id="gender"></span>
+          </div>
+          <div class="row">
+            <p class="font-weight-bold col-2">martial status</p>
+            <b class="col-1" >:</b>
+            <span class="col-5" id="martial_status"></span>
+          </div>
+          <div class="row">
+            <p class="font-weight-bold col-2">Father Name</p>
+            <b class="col-1" >:</b>
+            <span class="col-5" id="father_name"></span>
+          </div>
+          <div class="row">
+            <p class="font-weight-bold col-2">Mother Name</p>
+            <b class="col-1" >:</b>
+            <span class="col-5" id="mother_name"></span>
+          </div>
+          <div class="row">
+            <p class="font-weight-bold col-2">Hobbies</p>
+            <b class="col-1" >:</b>
+            <span class="col-5" id="hobbies"></span>
+          </div>
+          <div class="row">
+            <p class="font-weight-bold col-2">Language</p>
+            <b class="col-1" >:</b>
+            <span class="col-5" id="language"></span>
+          </div>
+        </div>
+        <h5 class="font-weight-bold pt-4 pb-4">Declaration</h5>
+        <p class="container" id="declaration"></p>
+        <p class="font-weight-bold text-right pt-4">Your Faithfully,</p>
+        <p class="bold text-right" id="sign"></p>
+    </div>
+    <script src="js/view_script.js"></script>
+</body>
+</html>

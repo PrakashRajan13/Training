@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery</title>
+    <style>
+        .active{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>click change</p>
+    <button id="button1">change</button>
+    <button id="button2">change color</button>
+    <h1>Prakash</h1>
+    <script type="" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#button1").click(function(){
+                $("p").html("You clicked")
+            })
+            $("#button2").click(function(){
+                $("p").toggleClass("active");
+            })
+            $("h1").on({
+                click:function(){
+                $(this).css("color","blue");
+            },
+            mouseenter:function(){
+                $(this).css("color","green");
+            },
+            mouseleave:function(){
+                $(this).css("color","black");
+            }
+        })
+        });
+    </script>
+</body>
+</html>
