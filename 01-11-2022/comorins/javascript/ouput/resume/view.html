@@ -29,51 +29,19 @@
                 <th scope="col">Percentage</th>
               </tr>
             </thead>
-            <tbody class="text-center" >
-              <tr>
-                <td id="course0"></td>
-                <td id="instutite0"></td>
-                <td id="year0"></td>
-                <td id="percentage0"></td>
-              </tr>
-              <tr>
-                <td id="course1"></td>
-                <td id="instutite1"></td>
-                <td id="year1"></td>
-                <td id="percentage1"></td>
-              </tr>
-              <tr>
-                <td id="course2"></td>
-                <td id="instutite2"></td>
-                <td id="year2"></td>
-                <td id="percentage2"></td>
-              </tr>
-            </tbody>
+            <tbody class="text-center" id="education"></tbody>
           </table>
         </div>
                 <!-- skills -->
         <h5 class="font-weight-bold pt-4">Skills : <span id="skills"></span></h5>
                     <!-- Experience -->
         <h5 class="font-weight-bold pt-4 pb-4">Experience</h5>
-        <div class="container">
-          <p class="font-weight-bold">Organisation :<span id="organisation0"></span></p>
-          <p class="font-weight-bold">Role :<span id="role0"></span></p>
-          <p class="font-weight-bold">Year :<span id="period0"></span></p>
-          <p class="font-weight-bold">E-mail ID :<span id="contact0"></span></p>
-          <!-- <p class="font-weight-bold">Organisation :<span id="organisation1"></span></p>
-          <p class="font-weight-bold">Role :<span id="role1"></span></p>
-          <p class="font-weight-bold">Year :<span id="period1"></span></p>
-          <p class="font-weight-bold">E-mail ID :<span id="contact1"></span></p> -->
+        <div class="container" id="experience">
+
         </div>
                       <!-- projects -->
         <h5 class="font-weight-bold pt-4 pb-4">Projects</h5>
-        <div class="container">
-          <p class="font-weight-bold">Title :<span id="title0"></span></p>
-          <p class="font-weight-bold">Year :<span id="time0"></span></p>
-          <p class="font-weight-bold">Abstract : <span id="abstract0"></span></p>
-          <p class="font-weight-bold">Title :<span id="title1"></span></p>
-          <p class="font-weight-bold">Year :<span id="time1"></span></p>
-          <p class="font-weight-bold">Abstract : <span id="abstract1"></span></p>
+        <div class="container" id="project">
         </div>
                     <!-- personal_details -->
         <h5 class="font-weight-bold pt-4 pb-4">Personal Details</h5>
@@ -124,6 +92,80 @@
         <p class="font-weight-bold text-right pt-4">Your Faithfully,</p>
         <p class="bold text-right" id="sign"></p>
     </div>
-    <script src="js/view_script.js"></script>
+    <script type="" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      let url_string=window.location.search;
+      let urlParams = new URLSearchParams(url_string);
+      let url = urlParams.get('id')
+      console.log(url)
+      $(document).ready(function(){
+        console.log(url)
+        $.ajax({
+          Type :"get",
+          url:"http://karka.academy/api/action.php",
+
+          data :
+          {
+          request : "get_resume_by_id",
+          user : "prakash",
+          id:url
+        },
+          success:function(data){
+            let detail=JSON.parse(data).data
+            details=JSON.parse(detail.data)
+            console.log(details)
+            $("#name").html(details.name);
+            $("#email").html(details.email);
+            $("#mobile").html(details.mobile);
+            $("#rolename").html(details.role);
+            $("#career_objective").html(details.career_objective);
+                    //Education
+            let education=details.education;
+            for(let i=0;i<education.length;i++){
+              let element=`
+              <tr>
+                <td id="course">${education[i].course}</td>
+                <td id="instutite">${education[i].instutite}</td>
+                <td id="year">${education[i].year}</td>
+                <td id="percentage0">${education[i].percentage}</td>
+              </tr>`
+              $("#education").append(element)
+            }
+            $("#skills").html(""+details.skill);
+                    //Experience
+            let experience=details.experience
+            for(i=0;i<experience.length;i++){
+              element=`
+              <p class="font-weight-bold">Organisation :<span class="pl-1" id="organisation">${experience[i].organisation}</span></p>
+              <p class="font-weight-bold">Role :<span id="role" class="pl-1">${experience[i].role}</span></p>
+              <p class="font-weight-bold">Year :<span id="period" class="pl-1">${experience[i].period}</span></p>
+              <p class="font-weight-bold">E-mail ID :<span id="contact" class="pl-1">${experience[i].contact}</span></p>`
+              $("#experience").append(element)
+            }
+                  //project
+            let project=details.project
+            for(i=0;i<project.length;i++){
+              element=`
+              <p class="font-weight-bold">Title :<span id="title">${project[i].title}</span></p>
+              <p class="font-weight-bold">Year :<span id="time">${project[i].year}</span></p>
+              <p class="font-weight-bold">Abstract : <span id="abstract">${project[i].abstract}</span></p>`
+              $("#project").append(element)
+            }
+                //personal Details
+            let personal_details=details.personaldetails
+            $("#DOB").html(personal_details.DOB);
+            $("#address").html(personal_details.address);
+            $("#gender").html(personal_details.gender);
+            $("#martial_status").html(personal_details.martialstatus)
+            $("#father_name").html(personal_details.fathername);
+            $("#mother_name").html(personal_details.mothername);
+            $("#hobbies").html(""+details.hobbies);
+            $("#language").html(""+details.language);
+            $("#declaration").html(details.declaration);
+            $("#sign").html(details.name);
+          }
+         })
+      })
+    </script>
 </body>
 </html>
