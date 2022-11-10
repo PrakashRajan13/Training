@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        const name = () => {
+            
+            console.log("add =",2+3)
+            console.log("sub =",2-3)
+            console.log(this)
+        }
+        name()       
+            class parent{
+                pf1(){
+                    console.log(1)
+                }
+                pf2(){
+                    console.log(2)
+                }
+            }
+            class child extends parent{
+                pf1(){
+                    console.log("pf1")
+                }
+                cf1(){
+                    console.log(3)
+                }
+                cf2(){
+                    this.pf1()
+                    super.pf1()
+                }
+            }
+            let obj1=new child()
+            obj1.cf2();
+            function myFunction() {
+            console.log(this);
+            }
+
+myFunction();
+const myObject = {
+  myMethod(items) {
+    console.log(this); // logs myObject
+    const callback = () => {
+      console.log(this); // logs myObject
+    };
+    items.forEach(callback);
+  }
+};
+myObject.myMethod([1, 2, 3]); 
+    </script>
+</body>
+</html>
+
+

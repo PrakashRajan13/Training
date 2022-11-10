@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-4</title>
+</head>
+<body>
+    <script>
+        //exercise-1
+        const arry = [1, 2,3,4,5,5];
+        const toFindDuplicates = arry => arry.filter((item, index) =>arry.indexOf(item) == index )
+        const duplicateElements = toFindDuplicates(arry);
+        console.log(duplicateElements);
+        //exercise-4
+        let Num=[2,1,6,3,5,8,10]
+        let filter=Num.filter(n=>n%2!=0)
+        console.log("The odd number",filter)
+    </script>
+</body>
+</html>

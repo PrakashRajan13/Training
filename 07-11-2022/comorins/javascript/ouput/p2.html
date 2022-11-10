@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-2</title>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        //exercise-1
+    let add=(a,b=a+1)=> console.log(a+b);
+    add(2,1);
+    add(2);
+        //exercise-2
+    class data{
+        constructor(name){
+        this.name=name
+        }
+        static get(){
+            console.log(this.name)
+        }
+    }
+    data.get("This is print without new keyword");
+        //exercise-3
+    let first = {
+        name: "ram",
+        age: 23
+    }
+    let second = {
+        name: "ram",
+        age: 22
+    }
+    function check(first, second) {
+        for (let i in second) {
+            if (first[i] == second[i]) {
+                return true;
+            }
+                return false
+        }
+    }
+    console.log(check(first,second))
+        //exercise-4
+    let x=[1,2,3,4,5,6,7,8,9,0];
+    x.forEach(i=>x[i]%2==0?x.splice(i,1):"")
+    console.log(x)
+        //exercise-5
+    let typefunction=(type)=>type==null || type==undefined?console.log("Null or Undefined"):console.log(typeof(type));
+    typefunction(1)
+    typefunction()
+    typefunction("")
+        //exercise-6
+    let profile={
+        name:"prakash",
+        personal_details:{
+            father_name:"rengarajan",
+            occupation:"electrician"
+        }
+    }    
+   const {name,personal_details:{father_name,occupation}}=profile;
+   console.log(occupation)
+    </script>
+</body>
+</html>

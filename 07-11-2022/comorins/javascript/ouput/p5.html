@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Part-5</title>
+</head>
+<body>
+    <script>
+                //exercise-1
+        let a=[1,2,3];
+        let b=[4,5,6];
+        let c=[...a,...b];
+        let d=c.map(value=>value)
+        console.log("Clone array",d)
+        console.log("Maxium value in array ",Math.max(...d))
+        console.log("Maxium value in array ",Math.min(...d))
+                //exercise-2
+        let fishermen=[{name:"ram",score:100},
+                        {name:"mano",score:12},
+                        {name:"raj",score:123},
+                        {name:"remo",score:120},
+                        {name:"ramu",score:23}
+                        ];
+        let sum=0
+        let fishmen=fishermen.map(value=>value)
+        fishmen.forEach(value=>sum+=value.score)
+        console.log("The total score of fishermen",sum)
+        console.log("The average of the score is",sum/fishermen.length)
+        let filterfish=fishermen.filter(value=> value.score>100)
+        filterfish.forEach(value=> console.log("The score above 100 fishermen name :",value.name))
+                //exercise-3
+        let string="1abcd@123ashg25"
+        console.log(string.replace(/\D/g, ''));
+                //exercise-5
+        let positive_negative=(a,b)=>{a>0 && b>0?console.log(`${a} and ${b} are positive`) : a>0 && b<0? console.log(`${a} is positive `) :a<0 && b>0? console.log(`${b} is positive `): console.log(`${a} and ${b} are negative`)}
+        positive_negative(3,2)
+        positive_negative(-3,2)
+        positive_negative(3,-2)
+        positive_negative(-3,-2)
+    </script>
+</body>
+</html>
