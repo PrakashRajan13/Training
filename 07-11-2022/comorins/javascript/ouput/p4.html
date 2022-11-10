@@ -13,6 +13,26 @@
         const toFindDuplicates = arry => arry.filter((item, index) =>arry.indexOf(item) == index )
         const duplicateElements = toFindDuplicates(arry);
         console.log(duplicateElements);
+        //exercise-2
+        const threepara=(a,b,c)=>{
+            if(a=="add"){
+                console.log([b,...c])
+            }else if(a="remove"){
+                    c.splice(0,1)
+                }
+                console.log(c)
+            };
+        threepara("add",1,[1,2,3])
+        threepara("remove",1,[1,2,3])
+        //exercise-3
+        array_to_check=['prakash',1,2,3,'13']
+        let num_check=(data)=>{
+             let a=data.filter((value)=>{
+              return typeof value==="number"
+             })
+             console.log(a)
+        }
+        num_check(array_to_check)
         //exercise-4
         let Num=[2,1,6,3,5,8,10]
         let filter=Num.filter(n=>n%2!=0)

@@ -17,21 +17,14 @@
         qualification:"B.E"
     }
     for(let i in profile){
-        console.log(`${i} : ${profile[i]}`)
+        console.log(`1-${i} : ${profile[i]}`)
     }
         //exercise-3
-    console.warn("please update your browser");
+    console.warn("3","please update your browser");
         //exercise-4
-    console.error("Invalid password");
+    console.error("4","Invalid password");
         //exercise-5
-    //exercise-5
-    let bio_data={
-        fname:"prakash"
-    }
-    for(x in bio_data){
-        console.log(x)
-    }
-    
+    console.info("5","Paragraphs are block-level elements, and notably will automatically close if another block-level element is parsed before the closing </p> tag.")
         //exercise-6
     try{
         console.log("catch")
@@ -68,6 +61,22 @@
         day = "Saturday";
     }
     console.log(day)
+        //exercise-8
+        let empty_object={}
+        let value_object={name:'prakash'}
+            let first_obj= (data)=> {
+                return Object.values(data).length==0;
+            }
+            console.log(first_obj(empty_object))
+            console.log(first_obj(value_object))
+
+            let second_obj=(data)=>{
+                return JSON.stringify(data) === '{}'
+            }
+            console.log(first_obj(empty_object))
+            console.log(first_obj(value_object))
+        
+            console.log(jQuery.isEmptyObject(empty_object))
         //exercise-9
         let array=[11,23,4,5,778,9,1]
         let filter=array.filter(n=>n>30);
