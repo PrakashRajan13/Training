@@ -34,10 +34,10 @@
         let string="1abcd@123ashg25"
         console.log(string.replace(/\D/g, ''));
                 //exercise-4
-        let all_scores=[-100,100,50,'prakash',67,'javascript']
-        let check_positive=all_scores.map((data)=>{data<0? console.log(`${data} is a negative number`):""});
-         let check_type=()=>{for(let x of all_scores){typeof(x)!='number'?console.log(`${x} is not a number`):""}}
-         check_type(all_scores)
+        let scores=[-100,100,50,'prakash',67,'javascript']
+        let check_positive=scores.map((data)=>{data<0? console.log(`${data} is a negative number`):""});
+         let check_type=()=>{for(let x of scores){typeof(x)!='number'?console.log(`${x} is not a number`):""}}
+         check_type(scores)
                 //exercise-5
         let positive_negative=(a,b)=>{a>0 && b>0?console.log(`${a} and ${b} are positive`) : a>0 && b<0? console.log(`${a} is positive `) :a<0 && b>0? console.log(`${b} is positive `): console.log(`${a} and ${b} are negative`)}
         positive_negative(3,2)
